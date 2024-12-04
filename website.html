@@ -1,0 +1,81 @@
+<body>     
+    <h1>Homer's Web Page</h1>  
+    <div class="main">
+    
+        <div class="left">
+            <img src="gifs/worm.gif" alt="Example GIF">
+            <img src="gifs/toaster.gif" alt="Example GIF">
+            <img src="gifs/toaster.gif" alt="Example GIF">
+            <img src="gifs/mouth.gif" alt="Example GIF">
+            <img src="gifs/bell.gif" alt="Example GIF">
+            <img src="gifs/clock.gif" alt="Example GIF">
+        </div>
+        
+        <div class="center"> 
+            <img src="gifs/jesus.gif" alt="Example GIF">
+        </div>
+        
+        <div class="right"> 
+            <img src="gifs/worm.gif" alt="Example GIF">
+            <img src="gifs/toaster.gif" alt="Example GIF">
+            <img src="gifs/bell.gif" alt="Example GIF">
+            <img src="gifs/mouth.gif" alt="Example GIF">
+            <img src="gifs/toaster.gif" alt="Example GIF">
+            <img src="gifs/clock.gif" alt="Example GIF">
+        </div>
+    </div>
+    </body>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Centers the .main box vertically */
+            background: #83c4e5;
+        }
+    
+        h1 {
+            font-size: 30pt;
+            margin-bottom: 10px;
+        }
+    
+        .main {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch; /* Ensures all child divs are the same height */
+            max-width: 1000px; /* Maximum width of the box */
+            width: 100%; /* Full width for smaller screens */
+            height: 70vh; /* Makes the box responsive, but you can tweak this */
+            padding: 20px;
+        }
+    
+        .left, .right {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns */
+            gap: 10px;
+            flex: 1; /* Ensures all divs share equal width */
+        }
+    
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1; /* Ensures equal width with .left and .right */
+        }
+    
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Makes the image fill its container while maintaining aspect ratio */
+        }
+    </style>
+    
